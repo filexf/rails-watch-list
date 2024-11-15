@@ -9,7 +9,12 @@
 #   end
 
 
-# url = "https://api.themoviedb.org/3/movie/top_rated?api_key=<your_api_key>."
+url = "https://api.themoviedb.org/3/movie/top_rated?api_key=<your_api_key>."
+
+
+
+
+
 puts ""
 puts "Destroying every movie!"
 Movie.destroy_all
