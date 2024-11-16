@@ -1,14 +1,32 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.freepik.com/free-photo/popcorn-table-front-movie-theater_1340-33319.jpg?t=st=1731668239~exp=1731671839~hmac=71e8e5a9c34e5cc7cd54d93c5f3c599faf8fdad4557fac240b8e01fdf84706e6&w=1800);">
+      <div class="container">
+        <h1>Create any movie list you want! </h1>
+      </div>
+    </div>
 
 
-<h1>Liste des listes de listes :</h1>
+<div class="d-flex flex-column justify-content-center align-items-center">
 
-<ul>
-
-  <% @lists.each do |list|  %>
-    <li> <strong> <%= link_to list.name, list_path(list) %> </strong> </li>
-  <% end %>
-
-</ul>
+<h1 class="m-4">Liste de films par genre :</h1>
 
 
-<%= link_to "Add a list", new_list_path, class: "btn btn-primary"%>
+
+<div class="cards">
+<% @lists.each do |list|  %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, crop: :fill %>')">
+      <%= link_to list.name, list_path(list), class: "col" %>
+    </div>
+<% end %>
+
+</div>
+
+<%= link_to "Add a list", new_list_path, class: "btn btn-primary m-3"%>
+
+
+
+
+
+
+<%# <!-- for face detection -->
+<%= cl_image_tag("IMAGE_WITH_FACE_ID",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>

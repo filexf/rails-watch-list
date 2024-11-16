@@ -1,4 +1,8 @@
+<h1 class="my-4">Quel type de liste souhaitez vous créer ?</h1>
+<p class="my-5"> Ajoutez une image en plus ! </p>
+
 <%= simple_form_for @list do |f| %>
   <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>

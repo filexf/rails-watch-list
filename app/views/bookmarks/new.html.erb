@@ -1,4 +1,11 @@
-<h1>Quel film souhaitez vous ajouter à la liste ?</h1>
+<%# <h1>Quel film souhaitez vous ajouter à la liste ?</h1>
+
+
+
+<%# Ce sera le formulaire pour associer des films à la liste crée %>
+
+
+<h1> Quels films souhaitez vous joindre à la liste </h1>
 
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :comment %>

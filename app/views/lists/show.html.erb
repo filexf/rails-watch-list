@@ -1,1 +1,10 @@
-<%= link_to "Add a film to list", new_list_bookmark_path(@list), class: "btn btn-primary" %>
+<div class="d-flex flex-column justify-content-center container col-3">
+
+<h1 class="d-flex justify-content-center mt-5"> <strong> <%= @list.name %> </strong> </h1>
+
+<%= link_to "Add a film to list", new_list_bookmark_path(@list), class: "btn btn-primary m-5 d-flex  justify-content-center" %>
+
+<%= cl_image_tag(@list.photo.key,
+      width: 400, height: 300, crop: :fill) %>
+
+</div>
